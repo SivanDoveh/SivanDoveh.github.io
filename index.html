@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="Sivan Doveh">
+  <meta name="theme-color" content="#2962ff">
+  <meta name="description" content="">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/academic.css">
+
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" async></script>
+
+  <!-- Metadata -->
+  <link rel="canonical" href="/">
+  <meta property="og:site_name" content="Sivan Doveh">
+  <meta property="og:url" content="/">
+  <meta property="og:title" content="Sivan Doveh">
+  <title>Sivan Doveh</title>
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main">
+  <nav class="navbar navbar-expand-lg navbar-light" id="navbar-main">
+    <div class="container">
+      <a class="navbar-brand" href="/">Sivan Doveh</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="/#about">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#papers">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#activities">Activities</a></li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link js-search" href="#"><i class="fas fa-search"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="about" class="home-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div id="profile">
+            <h2>Sivan Doveh</h2>
+            <h3><a href="https://www.mit.edu/" target="_blank" rel="noopener">MIT, USA</a></h3>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <h3>Contact</h3>
+          <ul>
+            <li>Email: jmirza[at]mit.edu</li>
+            <li>Location: Boston, USA</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="news" class="home-section">
+    <div class="container">
+      <h1>Recent News</h1>
+      <div class="news-slider">
+        <div>Paper accepted at NeurIPS 2024.</div>
+        <div>Successfully defended Ph.D. thesis.</div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    $(document).ready(function () {
+      $('.news-slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        dots: true,
+        arrows: true,
+        responsive: [
+          { breakpoint: 1024, settings: { slidesToShow: 2 } },
+          { breakpoint: 600, settings: { slidesToShow: 1 } }
+        ]
+      });
+    });
+  </script>
+</body>
+
+</html>
