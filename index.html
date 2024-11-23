@@ -66,11 +66,47 @@
   </script>
 
   <!-- Add custom style -->
-  <style>
-    p {
-      text-align: justify;
-    }
-  </style>
+<!-- Add custom styles for better alignment -->
+<style>
+  #profile {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 20px; /* Add space between the image and the text */
+  }
+
+  #profile img {
+    border-radius: 50%; /* Make the image circular */
+    max-width: 150px; /* Set a fixed size for the image */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  #profile-details {
+    flex: 1; /* Allow text to take the remaining width */
+    text-align: left; /* Align text to the left */
+  }
+
+  #profile-details h2 {
+    margin-bottom: 10px; /* Add space below the name */
+  }
+
+  #profile-links {
+    margin-top: 15px; /* Add spacing above the links */
+  }
+
+  #profile-links a {
+    margin-right: 10px; /* Add space between links */
+    text-decoration: none;
+    color: #2962ff; /* Blue for links */
+    font-weight: bold;
+  }
+
+  #profile-links a:hover {
+    text-decoration: underline; /* Add underline effect on hover */
+  }
+</style>
+
+
+
   <title>Sivan Doveh</title>
 </head>
 
@@ -142,7 +178,7 @@
   </div>
 </nav>
 <span class="js-widget-page d-none"></span>
-  <section id="about" class="home-section wg-about   " style="padding: 30px 0 20px 0;" >
+<!--   <section id="about" class="home-section wg-about   " style="padding: 30px 0 20px 0;" >
     <div class="container">
 <div class="row">
   <div class="col-12 col-lg-4">
@@ -159,7 +195,7 @@
         <a href="https://www.linkedin.com/in/sivan-doveh/"><b>Linkedin</b></a>
         | <a href="https://scholar.google.co.il/citations?user=ER4dt8cAAAAJ&hl=en"><b>Google Scholar</b></a>
         | <a href="https://github.com/SivanDoveh"><b>Github</b></a>
-                | <a href="sivan.doveh@weizmann.ac.il"><b>Email</b></a>
+| <a href="mailto:sivan.doveh@weizmann.ac.il"><b>Email</b></a>
 
       <br> 
       <br>
@@ -178,42 +214,51 @@ My research focuses on how multi-modal models learn from and understand data, st
   I earned my Master’s degree in Electrical Engineering from <a href="https://english.tau.ac.il">Tel Aviv University</a> and my Bachelor’s degree in Electrical Engineering from <a href="https://www.bgu.ac.il/en/">Ben-Gurion University of the Negev (BGU)</a>.
 In parallel with my academic journey, I have also worked at <a href="https://www.appliedmaterials.com/">Applied Materials</a> and <a href="https://www.research.ibm.com/">IBM Research</a>.</p> 
 </p>
-<!--    <div class="row"> -->
-<!-- 
-      <div class="col-md-6">
-        <h3>Contact</h3>
-        <ul class="ul-contact fa-ul">
-          <li>          
-            <i class="fa-li fas fa-envelope"></i>
-            <div class="description">
-              <p class="course">sivan.doveh [at] weizmann.ac.il</p>
-            </div>
-          </li>
-        </ul>        
-      </div> -->
-
-<!--       <div class="col-md-6">
-        <h3>Education</h3>
-        <ul class="ul-edu fa-ul">          
-          <li>
-            <i class="fa-li fas fa-graduation-cap"></i>
-            <div class="description">
-              <p class="course">Ph.D. in Computer Vision (2021 - current) </p>
-              <p class="institution">Weizmann Institute of Science</p>
-              <p class="course">MSc in Electrical Engineering (2017 - 2020) </p>
-              <p class="institution">Tel Aviv University</p>
-              <p class="course">BSc in Electrical Engineering (2012 - 2016)</p>
-              <p class="institution">Ben-Gurion University of the Negev (BGU)</p>
-            </div>
-          </li>
-        </ul>
-      </div> -->
-<!--     </div> -->
   </div>
 </div>
     </div>
-  </section>
+  </section> -->
+<section id="about" class="home-section wg-about" style="padding: 30px 0 20px 0;">
+  <div class="container">
+    <div class="row">
+      <div id="profile">
+        <!-- Profile Image -->
+        <img class="avatar avatar-circle" src="/authors/admin/sivan.JPG" alt="Avatar">
 
+        <!-- Profile Details -->
+        <div id="profile-details">
+          <h2>Sivan Doveh</h2>
+          <p>
+            I am a PhD student in Computer Science at the 
+            <a href="https://www.weizmann.ac.il/pages/">Weizmann Institute of Science</a>, 
+            supervised by <a href="https://www.weizmann.ac.il/math/shimon/">Prof. Shimon Ullman</a>. 
+            My research focuses on how multi-modal models learn from and understand data, studying 
+            how the characteristics of the data and learning goals affect their abilities—especially 
+            in compositional reasoning and in-context learning. By exploring these fundamental aspects, 
+            I aim to use these insights for practical applications and develop models that are robust 
+            and have a deeper understanding of complex data.
+          </p>
+          <p>
+            I earned my Master’s degree in Electrical Engineering from 
+            <a href="https://english.tau.ac.il">Tel Aviv University</a> and my Bachelor’s degree in 
+            Electrical Engineering from <a href="https://www.bgu.ac.il/en/">Ben-Gurion University of 
+            the Negev (BGU)</a>. In parallel with my academic journey, I have also worked at 
+            <a href="https://www.appliedmaterials.com/">Applied Materials</a> and 
+            <a href="https://www.research.ibm.com/">IBM Research</a>.
+          </p>
+
+          <!-- Links Section -->
+          <div id="profile-links">
+            <a href="https://www.linkedin.com/in/sivan-doveh/">LinkedIn</a>
+            | <a href="https://scholar.google.co.il/citations?user=ER4dt8cAAAAJ&hl=en">Google Scholar</a>
+            | <a href="https://github.com/SivanDoveh">GitHub</a>
+            | <a href="mailto:sivan.doveh@weizmann.ac.il">Email</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
   <section id="news" class="home-section wg-blank" style="padding: 20px 0;">
     <div class="container">
         <h1>Recent News</h1>
