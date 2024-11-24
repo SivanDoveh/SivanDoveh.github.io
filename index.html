@@ -97,14 +97,16 @@
         color: #ffffff;
     }
 
-    /* Standardize paper image sizes */
-    .img img {
-        width: 200px !important;
-        height: 150px !important;
-        object-fit: cover;
-        border-radius: 8px;
-        border: 1px solid #333;
-    }
+.img img {
+    width: auto; /* Ensure the width is adaptive */
+    max-width: 200px; /* Constrain maximum width */
+    height: auto; /* Allow height to adjust automatically */
+    max-height: 150px; /* Constrain maximum height */
+    object-fit: contain; /* Prevent images from being cropped */
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
 
     /* Additional dark mode enhancements */
     .home-section {
