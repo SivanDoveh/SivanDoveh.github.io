@@ -2,7 +2,8 @@
 <html lang="en-us">
 
 <head>
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='32'%3E🐱%3C/text%3E%3C/svg%3E">
   <meta charset="utf-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,26 +47,252 @@
   <meta property="og:site_name" content="Sivan Doveh">
   <meta property="og:url" content="/">
   <meta property="og:title" content="Sivan Doveh">
-  <meta property="og:description" content=""><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
-  <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="/img/avatar.png">
+  <meta property="twitter:image" content="/img/avatar.png">
+  <meta property="og:locale" content="en-us">
   
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "/?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  },
-  "url": "/"
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    },
+    "url": "/"
+  }
+  </script>
+  
+ 
+  <style>
+    :where(html, body, div, section, article) {
+    background-color: var(--background-primary);
 }
-</script>
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Variables for Dark Mode */
+:root {
+    --background-primary: #121212; /* Page background */
+    --background-secondary: #1a1a1a; /* Section background */
+    --accent-primary: #00bcd4; /* Link color */
+    --accent-secondary: #0097a7; /* Hover link color */
+    --text-primary: #ffffff; /* Main text color */
+    --text-secondary: #e0e0e0; /* Secondary text color */
+    --border-color: #1a1a1a/*#333; /* Border color */
+    --light-green: #32CD32; /* Define light green color */
+
+}
+    * {
+    background-color: var(--background-primary) !important;
+    color: var(--text-secondary) !important;
+}
+a {
+    color: #32CD32; /* Light green */
+    text-decoration: none; /* Remove underline if desired */
+}
+
+a:hover,
+a:focus {
+    color: var(--accent-secondary); /* Optional hover effect */
+}
+html {
+    background-color: var(--background-primary);
+}
+/* Body and Global Section Styles */
+body {
+    background-color: var(--background-primary);
+    min-height: 100vh;
+    color: var(--text-secondary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    background-color: var(--background-primary);
+    color: var(--text-secondary);
+    padding: 50px 15px;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--background-secondary);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.navbar .nav-link {
+    color: var(--accent-primary); /* Default color for navbar links */
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.navbar .nav-link.active {
+    color: var(--light-green); /* Light green for active navbar links */
+}
+
+.navbar .nav-link:hover {
+    color: var(--accent-secondary); /* Optional hover color */
+}
+.navbar {
+    background-color: var(--background-secondary);
+    border-bottom: 1px solid var(--border-color);
+} 
+ 
+/* .navbar .nav-link {
+    color: var(--accent-primary);
+    text-decoration: none;
+    margin: 0 10px;
+} */
+
+/* .navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--accent-secondary);
+} */
+
+.navbar .nav-link:visited {
+    color: var(--accent-primary);
+}  
+
+/* Typography */
+h1, h2, h3, h4, h5, h6, p, li, a {
+    color: var(--text-secondary);
+}
+
+h1, h2 {
+    color: var(--text-primary);
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Profile Section */
+#profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    background-color: var(--background-secondary);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+#profile .img img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#profile .description {
+    flex: 1;
+}
+
+/* Papers/Projects List */
+.ul-papers {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ul-papers li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--background-secondary);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease;
+}
+
+.ul-papers li:hover {
+    transform: translateY(-2px);
+}
+
+.ul-papers .img {
+    flex-shrink: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-secondary);
+}
+
+.ul-papers .img img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.ul-papers .description {
+    flex: 1;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.ul-papers .description p {
+    margin: 0 0 10px;
+}
+
+/* News Section */
+#news {
+    background-color: var(--background-secondary);
+    color: var(--text-secondary);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.news-slider div {
+    color: var(--text-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #profile {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .ul-papers li {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ul-papers .img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+</style>
+</head>
+
+
   <title>Sivan Doveh</title>
 </head>
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" class="dark-mode">
 
   <aside class="search-results" id="search">
   <div class="container">
@@ -120,9 +347,6 @@
         <li class="nav-item">
           <a class="nav-link " href="/#papers" data-target="#papers"><span>Publications</span></a>
         </li>
-                <li class="nav-item">
-          <a class="nav-link " href="/#activities" data-target="#activities"><span>Academic Activities</span></a>
-        </li>
       </ul>
     </div>
 
@@ -136,89 +360,50 @@
   </div>
 </nav>
 <span class="js-widget-page d-none"></span>
-  <section id="about" class="home-section wg-about   " style="padding: 30px 0 20px 0;" >
-    <div class="container">
-<div class="row">
-  <div class="col-12 col-lg-4">
-    <div id="profile">
-      <img class="avatar avatar-circle" src="/authors/admin/sivan.png" alt="Avatar">
-      <div class="portrait-title">
-        <h2>Sivan Doveh</h2>        
-        <h3>
 
-        </h3>
-      </div>
-      <td>
-      <br>
-        | <a href="https://www.linkedin.com/in/sivan-doveh/"><b>Linkedin</b></a>
-        | <a href="https://scholar.google.co.il/citations?user=ER4dt8cAAAAJ&hl=en"><b>Google Scholar</b></a>
-        | <a href="https://github.com/SivanDoveh"><b>Github</b></a>
-      <br>
-      <br>
-      </td>
-    </div>
-  </div>
-  <div class="col-12 col-lg-8">
+<section id="about" class="home-section wg-about" style="padding: 30px 0 20px 0;">
+  <div class="container">
+    <div class="row">
+      <div id="profile">
+        <!-- Profile Image -->
+        <img class="avatar avatar-circle" src="/authors/admin/sivan.JPG" alt="Avatar">
 
-    
-<br>
-<html>
-<head>
-  <style>
-    p {
-      text-align: justify;
-    }
-  </style>
-</head>
-<body>
-  <p>I am a PhD student in Computer Science at the <a href="https://www.weizmann.ac.il/pages/">Weizmann Institute of Science</a>, supervised by <a href="https://www.weizmann.ac.il/math/shimon/">Prof. Shimon Ullman</a>. 
-  My research focuses on how multi-modal models learn from and understand data, studying how the characteristics of the data and learning goals affect their abilities—especially in compositional reasoning and in-context learning. 
-    By exploring these fundamental aspects, I aim to use these insights for practical applications and develop models that are robust and have a deeper understanding of complex data.    
-    I earned my Master’s degree in Electrical Engineering from <a href="https://english.tau.ac.il">Tel Aviv University</a> and my Bachelor’s degree in Electrical Engineering from <a href="https://www.bgu.ac.il/en/">Ben-Gurion University of the Negev (BGU)</a>.
-  In parallel with my academic journey, I have also worked at <a href="https://www.appliedmaterials.com/">Applied Materials</a> and <a href="https://www.research.ibm.com/">IBM Research</a>.</p> 
+        <!-- Profile Details -->
+        <div id="profile-details">
+          <h2>Sivan Doveh</h2>
+          <p>
+            I am a PhD student in Computer Science at the 
+            <a href="https://www.weizmann.ac.il/pages/">Weizmann Institute of Science</a>, 
+            supervised by <a href="https://www.weizmann.ac.il/math/shimon/">Prof. Shimon Ullman</a>. 
+            My research focuses on how multi-modal models learn from and understand data, studying 
+            how the characteristics of the data and learning goals affect their abilities—especially 
+            in compositional reasoning and in-context learning. By exploring these fundamental aspects, 
+            I aim to use these insights for practical applications and develop models that are robust 
+            and have a deeper understanding of complex data.
+          </p>
+          <p>
+            I earned my Master’s degree in Electrical Engineering from 
+            <a href="https://english.tau.ac.il">Tel Aviv University</a> and my Bachelor’s degree in 
+            Electrical Engineering from <a href="https://www.bgu.ac.il/en/">Ben-Gurion University of 
+            the Negev (BGU)</a>. In parallel with my academic journey, I have also worked at 
+            <a href="https://www.appliedmaterials.com/">Applied Materials</a> and 
+            <a href="https://www.research.ibm.com/">IBM Research</a>.
+          </p>
+          <p>
+            <i style="color: #d63384;">Contact:</i> sivan.doveh [at] weizmann.ac.il
+          </p>
 
-</body>
-</html>
-   <div class="row">
-
-      <div class="col-md-6">
-        <h3>Contact</h3>
-        <ul class="ul-contact fa-ul">
-          <li>          
-            <i class="fa-li fas fa-envelope"></i>
-            <div class="description">
-              <p class="course">sivan.doveh [at] weizmann.ac.il</p>
-            </div>
-          </li>
-          <li>  
-            <i class="fa-li fas fa-map-marker"></i>
-
-          </li>
-        </ul>        
-      </div>
-
-      <div class="col-md-6">
-        <h3>Education</h3>
-        <ul class="ul-edu fa-ul">          
-          <li>
-            <i class="fa-li fas fa-graduation-cap"></i>
-            <div class="description">
-              <p class="course">Ph.D. in Computer Vision (2021 - current) </p>
-              <p class="institution">Weizmann</p>
-              <p class="course">MSc in EE (2017 - 2020) </p>
-              <p class="institution">TAU</p>
-              <p class="course">BSc in EE (2012 - 2016)</p>
-              <p class="institution">BGU</p>
-            </div>
-          </li>
-        </ul>
+          <!-- Links Section -->
+          <div id="profile-links">
+            <a href="https://www.linkedin.com/in/sivan-doveh/">LinkedIn</a>
+            | <a href="https://scholar.google.co.il/citations?user=ER4dt8cAAAAJ&hl=en">Google Scholar</a>
+            | <a href="https://github.com/SivanDoveh">GitHub</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-    </div>
-  </section>
-
+</section>
   <section id="news" class="home-section wg-blank" style="padding: 20px 0;">
     <div class="container">
         <h1>Recent News</h1>
@@ -262,157 +447,296 @@
                         slidesToShow: 1,
                         slidesToScroll: 1
                     }
-                }
+                } 
             ]
         });
     });
 </script>
 
 
-<!-- 
-  <section id="papers" class="home-section wg-papers   " style="padding: 20px 0 20px 0;" >
-    <div class="container">
-      
-<div class="row">
-    <div class="col-lg-12">
-
-      <h1>Selected Publications</h1>
+<section id="papers" class="home-section wg-papers" style="padding: 20px 0 20px 0;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1>Selected Publications</h1>
+      </div>
     </div>
     <div class="row">
-        <ul class="ul-papers">
+      <ul class="ul-papers">
 
+        <li style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+          <div class="img" style="margin-right: 20px;">
+            <img src="/papers/images/iploc.jpg" class="img-responsive" alt="">
+          </div>
+          <div class="description">
+            <p class="title">Teaching VLMs to Localize Specific Objects from In-context Examples (IPLoc)</p>
+            <p class="authors">
+              <b>Sivan Doveh</b>, 
+              <a href="https://scholar.google.co.il/citations?hl=iw&user=ER4dt8cAAAAJ">Nimrod Shabtay</a>, 
+              <a href="https://scholar.google.com/citations?hl=en&user=DculdNkAAAAJ">Wei Lin</a>, 
+              <a href="https://scholar.google.co.il/citations?hl=en&user=7ttMZRUAAAAJ">Eli Schwartz</a>, 
+              <a href="https://hildekuehne.github.io/">Hilde Kuehne</a>, 
+              <a href="https://scholar.google.co.il/citations?hl=iw&user=9aQUYVQAAAAJ">Raja Giryes</a>, 
+              <a href="https://www.rogerioferis.org/">Rogerio Feris</a>, 
+              <a href="https://mitibmwatsonailab.mit.edu/people/leonid-karlinsky/">Leonid Karlinsky</a>, 
+              <a href="https://people.csail.mit.edu/jamesglass/">James Glass</a>, 
+              <a href="https://scholar.google.co.uk/citations?user=uU_V_PsAAAAJ&hl=en">Assaf Arbelle</a>, 
+              <a href="https://scholar.google.com/citations?user=XOfA8ckAAAAJ&hl=en">Shimon Ullman</a>, 
+              <a href="https://jmiemirza.github.io">M. Jehanzeb Mirza</a>
+            </p>
+            <p class="venue">Arxiv 2024</p>
+            <p class="resources">
+              [
+              <a href="https://arxiv.org/abs/2411.13317">Paper</a>
+              <a href="https://github.com/SivanDoveh/IPLoc">Code</a>
+              ]
+            </p>
+          </div>
+        </li>
 
-<li>
-  <div class="img">
-    <img src="/papers/images/conme.jpeg" class="img-responsive" alt="">
-  </div>
-<div class="description">
-  <p class="title">ConMe: Rethinking Evaluation of Compositional Reasoning for Modern VLMs</p>
-  <sup>*</sup><a href="https://www.linkedin.com/in/ireneyhuang/">Irene Huang</a>, 
-  <sup>*</sup><a href="https://scholar.google.com/citations?user=JJRr8c8AAAAJ&hl=en">Wei Lin</a>, 
-  <sup>*</sup><b>M. Jehanzeb Mirza</b>,
- Jacob Hansen,
-    <a href="https://scholar.google.com.hk/citations?user=ER4dt8cAAAAJ&hl=ja">Sivan Doveh</a>,
-    <a href="https://victorbutoi.github.io/">Victor Ion Butoi</a>,
-    <a href="https://roeiherz.github.io/">Roei Herzig</a>,
-    <a href="https://scholar.google.co.uk/citations?user=uU_V_PsAAAAJ&hl=en">Assaf Arbelle</a>,<br>
-    <a href="https://hildekuehne.github.io/" target="_blank">Hilde Kuehne</a>,
-    <a href="https://scholar.google.com/citations?user=bh-uRFMAAAAJ&hl=en">Trevor Darrel</a>,
-    <a href="https://people.csail.mit.edu/ganchuang/">Chuang Gan</a>,
-    <a href="https://scholar.google.com/citations?user=FNhl50sAAAAJ&hl=en">Aude Oliva</a>,
-    <a href="https://www.rogerioferis.org/">Rogerio Feris</a>,
-    <a href="https://mitibmwatsonailab.mit.edu/people/leonid-karlinsky/">Leonid Karlinsky</a> <i>(*Equal Contribution)</i>, 
-  <p class="venue">NeurIPS 2024<span style="font-weight:normal"></span></p>
-  <p class="resources">
-    [
-      <a href="https://arxiv.org/pdf/2406.08164">Paper</a> |
-      <a href="https://huggingface.co/conme/ConMe">Dataset</a> |
-      <a href="https://github.com/jmiemirza/ConMe">Code</a>
-    ]
-  </p>
-</div>
-</li>
+                <li style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+          <div class="img" style="margin-right: 20px;">
+            <img src="/papers/images/glov.png" class="img-responsive" alt="">
+          </div>
+          <div class="description">
+            <p class="title">GLOV: Guided Large Language Models as Implicit Optimizers for Vision Language Models</p>
+            <p class="authors">
+ <a href="https://jmiemirza.github.io/">M. Jehanzeb Mirza</a>, 
+              <a href="https://scholar.google.com/citations?user=G6ema1YAAAAJ">Mengjie Zhao</a>, 
+              <a href="https://">Zhuoyuan Mao</a>, 
+              <b>Sivan Doveh</b>,
+              <a href="https://scholar.google.com/citations?user=95iYKsgAAAAJ">Wei Lin</a>, 
+              <a href="https://">Paul Gavrikov</a>, 
+              <a href="https://">Michael Dorkenwald</a>, 
+              <a href="https://">Shiqi Yang</a>, 
+              <a href="https://">Saurav Jha</a>, 
+              <a href="https://">Hiromi Wakaki</a>,  
+              <a href="https://">Yuki Mitsufuji</a>,  
+              <a href="https://scholar.google.com/citations?user=yGSduhAAAAAJ">Horst Possegger</a>, 
+              <a href="https://scholar.google.com/citations?user=ycXdMkoAAAAJ">Rogerio Feris</a>, 
+              <a href="https://scholar.google.com/citations?user=WbO7tjYAAAAJ">Leonid Karlinsky</a>, 
+              <a href="https://scholar.google.com/citations?user=Hh6PEMIAAAAJ">James Glass</a>
+            </p>
+            <p class="venue">Arxiv 2024</p>
+            <p class="resources">
+              [
+              <a href="https://arxiv.org/abs/2410.06154">Paper</a>
+              <a href="https://github.com/jmiemirza/GLOV">Code</a>
+              ]
+            </p>
+          </div>
+        </li>
+        
+        <li style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+          <div class="img" style="margin-right: 20px;">
+            <img src="/papers/images/conme.jpeg" class="img-responsive" alt="">
+          </div>
+          <div class="description">
+            <p class="title">ConMe: Rethinking Evaluation of Compositional Reasoning for Modern VLMs</p>
+            <p class="authors">
+              <sup>*</sup><a href="https://www.linkedin.com/in/ireneyhuang/">Irene Huang</a>, 
+              <sup>*</sup><a href="https://scholar.google.com/citations?user=JJRr8c8AAAAJ&hl=en">Wei Lin</a>, 
+              <sup>*</sup><a href="https://jmiemirza.github.io">M. Jehanzeb Mirza</a>, 
+              <a href="https://www.linkedin.com/in/jacob-hansen-ai/"> Jacob Hansen, 
+              <b>Sivan Doveh</b>, 
+              <a href="https://victorbutoi.github.io/">Victor Ion Butoi</a>, 
+              <a href="https://roeiherz.github.io/">Roei Herzig</a>, 
+              <a href="https://scholar.google.co.uk/citations?user=uU_V_PsAAAAJ&hl=en">Assaf Arbelle</a>, 
+              <a href="https://hildekuehne.github.io/" target="_blank">Hilde Kuehne</a>, 
+              <a href="https://scholar.google.com/citations?user=bh-uRFMAAAAJ&hl=en">Trevor Darrel</a>, 
+              <a href="https://people.csail.mit.edu/ganchuang/">Chuang Gan</a>, 
+              <a href="https://scholar.google.com/citations?user=FNhl50sAAAAJ&hl=en">Aude Oliva</a>, 
+              <a href="https://www.rogerioferis.org/">Rogerio Feris</a>, 
+              <a href="https://mitibmwatsonailab.mit.edu/people/leonid-karlinsky/">Leonid Karlinsky</a>
+            </p>
+            <p class="venue">NeurIPS 2024</p>
+            <p class="resources">
+              [
+              <a href="https://arxiv.org/pdf/2406.08164">Paper</a> |
+              <a href="https://huggingface.co/conme/ConMe">Dataset</a> |
+              <a href="https://github.com/jmiemirza/ConMe">Code</a>
+              ]
+            </p>
+          </div>
+        </li>
 
-          <li>
-            <div class="img">
-              <img src="/papers/images/metaprompting.png" class="img-responsive" alt="">
-            </div>
+        <li style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+          <div class="img" style="margin-right: 20px;">
+            <img src="/papers/images/metaprompting.png" class="img-responsive" alt="">
+          </div>
           <div class="description">
             <p class="title">Meta-Prompting for Automating Zero-shot Visual Recognition with LLMs</p>
-            <p class="authors"><b>M. Jehanzeb Mirza</b>,
-              <a href="https://mitibmwatsonailab.mit.edu/people/leonid-karlinsky/">Leonid Karlinsky</a>,
-              <a href="https://scholar.google.com/citations?user=JJRr8c8AAAAJ&hl=en">Wei Lin</a>,
-              <a href="https://scholar.google.com.hk/citations?user=ER4dt8cAAAAJ&hl=ja">Sivan Doveh</a>,
-              <a href="https://scholar.google.com/citations?user=hFcNhWEAAAAJ&hl=en">Jakub Micorek</a>,
-              <a href="https://scholar.google.com/citations?user=oDDqnQ4AAAAJ&hl=en">Mateusz Kozinski</a>,
-              <a href="https://hildekuehne.github.io/" target="_blank">Hilde Kuhene</a>,
+            <p class="authors">
+              <a href="https://jmiemirza.github.io">M. Jehanzeb Mirza</a>, 
+              <a href="https://mitibmwatsonailab.mit.edu/people/leonid-karlinsky/">Leonid Karlinsky</a>, 
+              <a href="https://scholar.google.com/citations?user=JJRr8c8AAAAJ&hl=en">Wei Lin</a>, 
+              <b>Sivan Doveh</b>, 
+              <a href="https://scholar.google.com/citations?user=hFcNhWEAAAAJ&hl=en">Jakub Micorek</a>, 
+              <a href="https://scholar.google.com/citations?user=oDDqnQ4AAAAJ&hl=en">Mateusz Kozinski</a>, 
+              <a href="https://hildekuehne.github.io/" target="_blank">Hilde Kuehne</a>, 
               <a href="https://scholar.google.com/citations?user=iWPrl3wAAAAJ&hl=en">Horst Possegger</a>
-            <p class="venue">ECCV 2024<span style="font-weight:normal"></span></p>
+            </p>
+            <p class="venue">ECCV 2024</p>
             <p class="resources">
               [
-                <a href="https://arxiv.org/pdf/2403.11755.pdf">Paper</a> |
-                <a href="https://jmiemirza.github.io/Meta-Prompting/">Project Page</a> |
-                <a href="https://github.com/jmiemirza/Meta-Prompting">Code</a>
+              <a href="https://arxiv.org/pdf/2403.11755.pdf">Paper</a> |
+              <a href="https://jmiemirza.github.io/Meta-Prompting/">Project Page</a> |
+              <a href="https://github.com/jmiemirza/Meta-Prompting">Code</a>
               ]
             </p>
           </div>
         </li>
 
-
-          <li>
-            <div class="img">
-              <img src="/papers/images/icl.png" class="img-responsive" alt="">
-            </div>
+        <li style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+          <div class="img" style="margin-right: 20px;">
+            <img src="/papers/images/icl.png" class="img-responsive" alt="">
+          </div>
           <div class="description">
-            <p class="title">Towards Multimodal In-Context Learning for Vision & Language Models</p>
+            <p class="title">Towards Multimodal In-Context Learning for Vision-Language Models</p>
             <p class="authors">
-              <a href="https://scholar.google.com.hk/citations?user=ER4dt8cAAAAJ&hl=ja">Sivan Doveh</a>,
-                            <a href="https://il.linkedin.com/in/shaked-perek-377b2869">Shaked Perek</a>,
-              <b>M. Jehanzeb Mirza</b>,
-                                        <a href="https://scholar.google.co.il/citations?user=hVyhT-gAAAAJ&hl=en">Amit Alfassy</a>,
-                            <a href="https://scholar.google.co.uk/citations?user=uU_V_PsAAAAJ&hl=en">Assaf Arbelle</a>,
-                            <a href="https://scholar.google.com/citations?user=XOfA8ckAAAAJ&hl=en">Shimon Ullman</a>,
-                          <a href="https://mitibmwatsonailab.mit.edu/people/leonid-karlinsky/">Leonid Karlinsky</a>
-
-            <p class="venue">ECCVW 2024<span style="font-weight:normal"></span></p>
+              <b>Sivan Doveh</b>, 
+              <a href="https://il.linkedin.com/in/shaked-perek-377b2869">Shaked Perek</a>, 
+              <a href="https://jmiemirza.github.io">M. Jehanzeb Mirza</a>, 
+              <a href="https://scholar.google.co.il/citations?user=hVyhT-gAAAAJ&hl=en">Amit Alfassy</a>, 
+              <a href="https://scholar.google.co.uk/citations?user=uU_V_PsAAAAJ&hl=en">Assaf Arbelle</a>, 
+              <a href="https://scholar.google.com/citations?user=XOfA8ckAAAAJ&hl=en">Shimon Ullman</a>, 
+              <a href="https://mitibmwatsonailab.mit.edu/people/leonid-karlinsky/">Leonid Karlinsky</a>
+            </p>
+            <p class="venue">ECCVW 2024</p>
             <p class="resources">
               [
-                <a href="https://arxiv.org/pdf/2403.12736.pdf">Paper</a>
+              <a href="https://arxiv.org/pdf/2403.12736.pdf">Paper</a>
+              <a href="https://github.com/SivanDoveh/LLaVA-ICL">Code</a>
               ]
             </p>
           </div>
         </li>
 
-          <li>
-            <div class="img">
-              <img src="/papers/images/steering_vlms.png" class="img-responsive" alt="">
-            </div>
+        <li style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+          <div class="img" style="margin-right: 20px;">
+            <img src="/papers/images/DAC.png" class="img-responsive" alt="">
+          </div>
           <div class="description">
-            <p class="title">Are Vision Language Models Texture or Shape Biased and Can We Steer Them?</p>
+            <p class="title">Dense and Aligned Captions (DAC) Promote Compositional Reasoning in VL Models</p>
             <p class="authors">
-                            <a href="https://paulgavrikov.github.io/">Paul Gavrikov</a>,
-              <a href="https://jovitalukasik.github.io/">Jovita Lukasik</a>,
-              <a href="https://jung.vision/">Steffen Jung</a>,
-              <a href="https://robertgeirhos.com/">Robert Geirhos</a>,
-              <a href="https://www.keuper-labs.org/members/bianca.html">Bianca Lamm</a>,<br>
-              <b>M. Jehanzeb Mirza</b>,
-              <a href="https://scholar.google.com/citations?user=KMqMQAcAAAAJ&hl=en">Margret Keuper</a>,
-              <a href="https://scholar.google.de/citations?user=BUkDvU0AAAAJ&hl=en">Janis Keuper</a>
-            <p class="venue">ArXiv Preprint 2024 <span style="font-weight:normal"></span></p>
+              <b>Sivan Doveh</b>, 
+              <a href="https://scholar.google.com/citations?user=tXSfEHcAAAAJ">Assaf Arbelle</a>, 
+              <a href="https://scholar.google.com/citations?user=7Jz-ZTQAAAAJ">Sivan Harary</a>, 
+              <a href="https://roeiherz.github.io/">Roei Herzig</a>, 
+              <a href="https://scholar.google.com/citations?user=dWfMgKoAAAAJ">Donghyun Kim</a>, 
+              <a href="https://scholar.google.com/citations?user=1zQxzvoAAAAJ">Paola Cascante-Bonilla</a>, 
+              <a href="https://scholar.google.com/citations?user=Uh8UpyoAAAAJ">Amit Alfassy</a>, 
+              <a href="https://scholar.google.com/citations?user=nFhLmIkAAAAJ">Rameswar Panda</a>, 
+              <a href="https://scholar.google.com/citations?user=XOfA8ckAAAAJ">Shimon Ullman</a>, 
+              <a href="https://scholar.google.com/citations?user=WbO7tjYAAAAJ">Leonid Karlinsky</a>
+            </p>
+            <p class="venue">NeurIPS 2023 <i style="color: #d63384;">Spotlight</i></p>
             <p class="resources">
               [
-                <a href="https://arxiv.org/pdf/2403.09193.pdf">Paper</a>
+              <a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/efe406d6d2674d176cdcd958ce605d17-Abstract-Conference.html">Paper</a>
+              <a href="https://github.com/SivanDoveh/DAC">Code</a>
               ]
             </p>
           </div>
         </li>
 
-
-          <li>
-            <div class="img">
-              <img src="/papers/images/ttt-kd.png" class="img-responsive" alt="">
-            </div>
+        <li style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+          <div class="img" style="margin-right: 20px;">
+            <img src="/papers/images/paola.jpg" class="img-responsive" alt="">
+          </div>
           <div class="description">
-            <p class="title">TTT-KD: Test-Time Training for 3D Semantic Segmentation through Knowledge Distillation from Foundation Models</p>
-             <p class="authors"> <a href="https://scholar.google.com/citations?user=ko_GXScAAAAJ&hl=en">Lisa Weijler</a>, <b>M. Jehanzeb Mirza</b>,
-              <a href="https://viscom.uni-ulm.de/members/leon-sick/">Leon Sick</a>,
-              <a href="https://tr.linkedin.com/in/canekkazan">Can Ekkazan</a>,
-              <a href="https://phermosilla.github.io/">Pedro Hermosilla</a>
-            <p class="venue">ArXiv Preprint 2024 <span style="font-weight:normal"></span></p>
+            <p class="title">Going Beyond Nouns With Vision & Language Models Using Synthetic Data</p>
+            <p class="authors">
+              <a href="https://scholar.google.com/citations?user=1zQxzvoAAAAJ">Paola Cascante-Bonilla</a>, 
+              <a href="https://"> Khaled Shehada, 
+                <a href="https://">James Seale Smith, 
+              <b>Sivan Doveh</b>, 
+              <a href="https://scholar.google.com/citations?hl=en&user=uVZrpMcAAAAJ">Donghyun Kim</a>, 
+              <a href="https://scholar.google.com/citations?user=nFhLmIkAAAAJ">Rameswar Panda</a>, 
+              <a href="https://scholar.google.com/citations?user=T1tAKTkAAAAJ">Gul Varol</a>, 
+              <a href="https://scholar.google.com/citations?user=NRmF26sAAAAJ">Aude Oliva</a>, 
+              <a href="https://scholar.google.com/citations?user=TtA_j4YAAAAJ">Vicente Ordonez</a>, 
+              <a href="https://scholar.google.com/citations?user=ycXdMkoAAAAJ">Rogerio Feris</a>, 
+              <a href="https://scholar.google.com/citations?user=WbO7tjYAAAAJ">Leonid Karlinsky</a>
+            </p>
+            <p class="venue">ICCV 2023</p>
             <p class="resources">
               [
-                <a href="https://arxiv.org/pdf/2403.11691.pdf">Paper</a>
+              <a href="https://openaccess.thecvf.com/content/ICCV2023/html/Cascante-Bonilla_Going_Beyond_Nouns_With_Vision__Language_Models_Using_Synthetic_ICCV_2023_paper.html">Paper</a>
               ]
             </p>
           </div>
-        </li> -->
+        </li>
 
+        <li style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+          <div class="img" style="margin-right: 20px;">
+            <img src="/papers/images/tsvlc.jpg" class="img-responsive" alt="">
+          </div>
+          <div class="description">
+            <p class="title">Teaching Structured Vision-Language Concepts to Vision-Language Models</p>
+            <p class="authors">
+              <b>Sivan Doveh</b>, 
+              <a href="https://scholar.google.com/citations?user=tXSfEHcAAAAJ">Assaf Arbelle</a>, 
+              <a href="https://scholar.google.com/citations?user=7Jz-ZTQAAAAJ">Sivan Harary</a>, 
+              <a href="https://scholar.google.co.il/citations?hl=en&user=7ttMZRUAAAAJ">Eli Schwartz</a>, 
+              <a href="https://roeiherz.github.io/">Roei Herzig</a>, 
+              <a href="https://scholar.google.com/citations?user=9aQUYVQAAAAJ">Raja Giryes</a>, 
+              <a href="https://scholar.google.com/citations?user=ycXdMkoAAAAJ">Rogerio Feris</a>, 
+              <a href="https://scholar.google.com/citations?user=nFhLmIkAAAAJ">Rameswar Panda</a>, 
+              <a href="https://scholar.google.com/citations?user=XOfA8ckAAAAJ">Shimon Ullman</a>, 
+              <a href="https://scholar.google.com/citations?user=WbO7tjYAAAAJ">Leonid Karlinsky</a>
+            </p>
+            <p class="venue">CVPR 2023</p>
+            <p class="resources">
+              [
+              <a href="https://openaccess.thecvf.com/content/CVPR2023/html/Doveh_Teaching_Structured_Vision__Language_Concepts_to_Vision__Language_CVPR_2023_paper.html">Paper</a>
+              <a href="https://github.com/SivanDoveh/TSVLC">Code</a>
+              ]
+            </p>
+          </div>
+        </li>
 
-        </ul>      
-    </div>  
-</div>
+        <li style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+          <div class="img" style="margin-right: 20px;">
+            <img src="/papers/images/gbs.png" class="img-responsive" alt="">
+          </div>
+          <div class="description">
+            <p class="title">Detector-Free Weakly Supervised Grounding by Separation</p>
+            <p class="authors">
+              <sup>*</sup><a href="https://scholar.google.co.uk/citations?user=uU_V_PsAAAAJ&hl=en">Assaf Arbelle</a>, 
+              <sup>*</sup><b>Sivan Doveh</b>, 
+              <sup>*</sup><a href="https://scholar.google.co.il/citations?user=hVyhT-gAAAAJ&hl=en">Amit Alfassy</a>, 
+              <a href="https://scholar.google.com/citations?user=z8XRK9IAAAAJ">Joseph Shtok</a>, 
+              <a href="https://scholar.google.com/citations?user=9cS77t0AAAAJ">Guy Lev</a>, 
+              <a href="https://scholar.google.co.il/citations?hl=en&user=7ttMZRUAAAAJ">Eli Schwartz</a>, 
+              <a href="https://hildekuehne.github.io/">Hilde Kuehne</a>, 
+              <a href="https://scholar.google.com/citations?user=Ld2wPBUAAAAJ">Hila Barak Levi</a>, 
+              <a href="https://scholar.google.com/citations?user=lHwKhHkAAAAJ">Prasanna Sattigeri</a>, 
+              <a href="https://scholar.google.com/citations?user=nFhLmIkAAAAJ">Rameswar Panda</a>, 
+              <a href="https://scholar.google.com/citations?user=8gm-CYYAAAAJ">Chun-Fu Chen</a>, 
+              <a href="https://scholar.google.com/citations?user=X-O8DacAAAAJ">Alex Bronstein</a>, 
+              <a href="https://scholar.google.com/citations?user=9Z4ZUpdx_sQC">Kate Saenko</a>, 
+              <a href="https://scholar.google.com/citations?user=XOfA8ckAAAAJ">Shimon Ullman</a>, 
+              <a href="https://scholar.google.com/citations?user=9aQUYVQAAAAJ">Raja Giryes</a>, 
+              <a href="https://scholar.google.com/citations?user=ycXdMkoAAAAJ">Rogerio Feris</a>, 
+              <a href="https://scholar.google.com/citations?user=WbO7tjYAAAAJ">Leonid Karlinsky</a>
+            </p>
+            <p class="venue">ICCV 2021 <i style="color: #d63384;">Oral</i></p>
+            <p class="resources">
+              [
+              <a href="https://openaccess.thecvf.com/content/ICCV2021/html/Arbelle_Detector-Free_Weakly_Supervised_Grounding_by_Separation_ICCV_2021_paper.html">Paper</a>
+              ]
+            </p>
+          </div>
+        </li>
+
+      </ul>
     </div>
-  </section>
+  </div>
+</section>
+
+
+
 
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -452,10 +776,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
 
     <script src="/js/academic.min.a8d7005002cb4a052fd6d721e83df9ba.js"></script>
-  <div class="container">
-    <footer class="site-footer">
+<!--   <div class="container"> -->
+<!--     <footer class="site-footer"> -->
   
-
+<!-- 
   <p class="powered-by">
     
     .
@@ -469,10 +793,10 @@
     </span>
     
   </p>
-</footer>
+</footer> -->
 
-  </div>
-
+<!--   </div> -->
+<!-- 
 <div id="modal" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -496,7 +820,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 </body>
 </html>
