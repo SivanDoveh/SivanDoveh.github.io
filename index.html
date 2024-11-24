@@ -196,27 +196,26 @@ a:focus {
     border: 1px solid var(--border-color);
 }
 
-
 #profile .img img {
-    width: 400px;
-    height: auto;
+    width: 200px; /* Ensure width and height are equal */
+    height: 200px; /* Equal height for a circular shape */
+    object-fit: cover; /* Prevent distortion */
+    border-radius: 50%; /* Circular shape */
+}
+
+#profile .avatar {
+    width: 200px; /* Match width and height */
+    height: 200px; /* Match height to width */
     object-fit: cover;
     border-radius: 50%;
 }
+
 
 #profile .description {
     flex: 1;
 }
 
 
-/* more profile stuff */
-#profile .avatar {
-    flex-shrink: 0;
-    width: 200px; /* Adjust to your desired width */
-    height: auto;
-    object-fit: cover; /* Ensures the image scales nicely */
-    border-radius: 50%; /* Keeps the circular shape */
-}
 
 #profile-details {
     flex: 1; /* Makes the text area fill the remaining space */
