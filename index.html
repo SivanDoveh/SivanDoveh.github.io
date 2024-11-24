@@ -185,7 +185,7 @@ a:focus {
     color: var(--accent-secondary); /* Optional hover effect */
 }
 /* Profile Section */
-#profile {
+/* #profile {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -220,8 +220,42 @@ a:focus {
     flex-direction: column; 
     justify-content: center; 
     line-height: 1.6; 
+} */
+
+#profile {
+    display: flex;
+    align-items: center; /* Align text and image vertically */
+    gap: 30px; /* Adds space between the image and text */
+    padding: 40px;
+    background-color: var(--background-secondary);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
 }
 
+#profile .img {
+    width: 400px; /* Sets a fixed width for the image container */
+    height: 400px; /* Ensures the container is a perfect square */
+    border-radius: 50%; /* Makes the container circular */
+    overflow: hidden; /* Ensures the image does not overflow the circular container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile .img img {
+    width: 100%; /* Ensures the image fills the container */
+    height: 100%; /* Ensures the image fills the container */
+    object-fit: cover; /* Crops the image to fit perfectly in the container */
+    border-radius: 50%; /* Ensures the image is also circular */
+}
+
+#profile .description {
+    flex: 1; /* Allows the text to fill the remaining space */
+    display: flex;
+    flex-direction: column; /* Stacks text content vertically */
+    justify-content: center; /* Aligns text vertically */
+    line-height: 1.6; /* Improves readability */
+}
 
 /* Papers/Projects List */
 .ul-papers {
