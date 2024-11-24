@@ -64,7 +64,139 @@
     "url": "/"
   }
   </script>
-    <style>
+  <style>
+/* General Body Styling */
+body {
+    font-size: 16px; /* Base font size */
+    background-color: #121212; /* Dark mode background */
+    color: #e0e0e0; /* Light text color for readability */
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5em; /* Ensure headers are larger than body text */
+    color: #ffffff; /* Bright white for emphasis */
+}
+
+p, li {
+    font-size: 1.1em; /* Slightly larger than base font size */
+}
+
+a {
+    color: #00bcd4; /* Turquoise link color */
+    text-decoration: none; /* Remove underline for cleaner look */
+}
+
+a:hover {
+    color: #0097a7; /* Slightly darker turquoise on hover */
+}
+
+/* Profile Section */
+#profile {
+    display: flex; /* Arrange image and text side by side */
+    align-items: flex-start; /* Align items to the top */
+    background-color: #1a1a1a; /* Slightly darker background */
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #333; /* Subtle border for contrast */
+    gap: 20px; /* Space between image and text */
+    margin: 20px 0;
+}
+
+#profile .img {
+    flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+#profile .img img {
+    width: 300px; /* Fixed width */
+    height: 300px; /* Fixed height */
+    object-fit: cover; /* Maintain aspect ratio and crop if necessary */
+    border-radius: 8px; /* Rounded corners */
+    border: 1px solid #333; /* Optional border for contrast */
+}
+
+#profile .description {
+    flex-grow: 1; /* Allow text to take the remaining space */
+    text-align: left; /* Align text to the left */
+    font-size: 1.1em; /* Slightly larger text */
+}
+
+/* Papers List */
+.ul-papers {
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+}
+
+.ul-papers li {
+    display: flex; /* Arrange image and text side by side */
+    align-items: flex-start; /* Align items to the top */
+    margin-bottom: 20px; /* Space between list items */
+    gap: 20px; /* Space between image and text */
+}
+
+.ul-papers .img {
+    flex-shrink: 0; /* Prevent image container from shrinking */
+}
+
+.ul-papers .description {
+    flex-grow: 1; /* Allow text to take remaining space */
+    background-color: #1a1a1a; /* Dark mode background */
+    padding: 15px;
+    border-radius: 8px; /* Rounded corners */
+    margin-left: 20px;
+}
+
+/* Dark Mode Navbar */
+.navbar {
+    background-color: #1a1a1a !important;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+    color: #e0e0e0 !important;
+}
+
+/* Cards */
+.card {
+    background-color: #1a1a1a;
+    border-color: #333;
+}
+
+/* News Section */
+#news {
+    background-color: #121212; /* Match the dark mode background */
+    color: #e0e0e0; /* Light text color */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    border: 1px solid #333; /* Subtle border for contrast */
+}
+
+/* News Slider */
+.news-slider {
+    background-color: #1a1a1a; /* Darker background for the slider */
+    color: #e0e0e0; /* Light text color */
+    padding: 10px;
+    border-radius: 8px; /* Rounded corners */
+    border: 1px solid #333; /* Subtle border */
+}
+
+.news-slider div {
+    color: #e0e0e0; /* Ensure inner text is visible */
+}
+
+/* Slider Controls */
+.slick-dots li button:before {
+    color: #e0e0e0 !important; /* Light-colored dots */
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: #bb86fc !important; /* Accent color for arrows */
+}
+</style>
+
+<!--     <style>
       .ul-papers li {
     display: flex; /* Display items in a row */
     align-items: flex-start; /* Align items to the top */
@@ -210,73 +342,8 @@ a:hover {
     .search-results {
         background-color: #121212;
     }
-    </style>
+    </style> -->
 </head>
-
-  <!-- Add custom style -->
-<!-- 
-<style>
-    body.dark-mode {
-    background-color: #121212; /* Dark background */
-    color: #e0e0e0; /* Light text */
-  }
-
-  body.dark-mode a {
-    color: #bb86fc; /* Accent color for links */
-  }
-
-  body.dark-mode .img img {
-    filter: brightness(0.8); /* Dim images slightly */
-  }
-
-  body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
-    color: #ffffff; /* Ensure headings are bright */
-  }
-  
-  papers.img img {
-  width: 150px; /* Set your desired width */
-  height: auto; /* Maintain aspect ratio */
-  max-width: 100%; /* Responsive behavior */
-}
-
-  #profile {
-    display: flex;
-    align-items: center; /* Align items vertically */
-    gap: 20px; /* Add space between the image and the text */
-  }
-
-  #profile img {
-    border-radius: 50%; /* Make the image circular */
-    max-width: 250px; /* Set a fixed size for the image */
-    height: auto; /* Maintain aspect ratio */
-  }
-
-  #profile-details {
-    flex: 1; /* Allow text to take the remaining width */
-    text-align: left; /* Align text to the left */
-    padding-left: 50px; /* Add padding to the left of the text */
-  }
-
-  #profile-details h2 {
-    margin-bottom: 10px; /* Add space below the name */
-  }
-
-  #profile-links {
-    margin-top: 15px; /* Add spacing above the links */
-  }
-
-  #profile-links a {
-    margin-right: 10px; /* Add space between links */
-    text-decoration: none;
-    color: #2962ff; /* Blue for links */
-    font-weight: bold;
-  }
-
-  #profile-links a:hover {
-    text-decoration: underline; /* Add underline effect on hover */
-  }
-</style>
-Add custom styles for better alignment -->
 
 
   <title>Sivan Doveh</title>
@@ -484,6 +551,39 @@ Add custom styles for better alignment -->
           </div>
         </li>
 
+                <li style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+          <div class="img" style="margin-right: 20px;">
+            <img src="/papers/images/glov.jpg" class="img-responsive" alt="">
+          </div>
+          <div class="description">
+            <p class="title">GLOV: Guided Large Language Models as Implicit Optimizers for Vision Language Models</p>
+            <p class="authors">
+ <a href="https://jmiemirza.github.io/">M. Jehanzeb Mirza</a>, 
+              <a href="https://scholar.google.com/citations?user=G6ema1YAAAAJ">Mengjie Zhao</a>, 
+              <a href="https://">Zhuoyuan Mao</a>, 
+              <b>Sivan Doveh</b>,
+              <a href="https://scholar.google.com/citations?user=95iYKsgAAAAJ">Wei Lin</a>, 
+              <a href="https://">Paul Gavrikov</a>, 
+              <a href="https://">Michael Dorkenwald</a>, 
+              <a href="https://">Shiqi Yang</a>, 
+              <a href="https://">Saurav Jha</a>, 
+              <a href="https://">Hiromi Wakaki</a>,  
+              <a href="https://">Yuki Mitsufuji</a>,  
+              <a href="https://scholar.google.com/citations?user=yGSduhAAAAAJ">Horst Possegger</a>, 
+              <a href="https://scholar.google.com/citations?user=ycXdMkoAAAAJ">Rogerio Feris</a>, 
+              <a href="https://scholar.google.com/citations?user=WbO7tjYAAAAJ">Leonid Karlinsky</a>, 
+              <a href="https://scholar.google.com/citations?user=Hh6PEMIAAAAJ">James Glass</a>
+            </p>
+            <p class="venue">Arxiv 2024</p>
+            <p class="resources">
+              [
+              <a href="https://arxiv.org/abs/2410.06154">Paper</a>
+              <a href="https://github.com/jmiemirza/GLOV">Code</a>
+              ]
+            </p>
+          </div>
+        </li>
+        
         <li style="display: flex; align-items: flex-start; margin-bottom: 20px;">
           <div class="img" style="margin-right: 20px;">
             <img src="/papers/images/conme.jpeg" class="img-responsive" alt="">
