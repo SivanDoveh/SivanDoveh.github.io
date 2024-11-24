@@ -182,13 +182,15 @@ a:focus {
 /* Profile Section */
 #profile {
     display: flex;
-    align-items: center;
+/*     align-items: center; */
+    align-items: stretch; /* Ensures both the image and text stretch to the same height */
     gap: 20px;
     padding: 30px;
     background-color: var(--background-secondary);
     border-radius: 8px;
     border: 1px solid var(--border-color);
 }
+
 
 #profile .img img {
     width: 400px;
@@ -199,6 +201,24 @@ a:focus {
 
 #profile .description {
     flex: 1;
+}
+
+
+/* more profile stuff */
+#profile .avatar {
+    flex-shrink: 0;
+    width: 200px; /* Adjust to your desired width */
+    height: auto;
+    object-fit: cover; /* Ensures the image scales nicely */
+    border-radius: 50%; /* Keeps the circular shape */
+}
+
+#profile-details {
+    flex: 1; /* Makes the text area fill the remaining space */
+    display: flex;
+    flex-direction: column; /* Stacks the text content */
+    justify-content: center; /* Aligns the text vertically */
+    line-height: 1.6; /* Improves readability */
 }
 
 /* Papers/Projects List */
