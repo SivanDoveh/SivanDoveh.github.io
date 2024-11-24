@@ -65,6 +65,31 @@
   }
   </script>
     <style>
+      .ul-papers li {
+    display: flex; /* Display items in a row */
+    align-items: flex-start; /* Align items to the top */
+    margin-bottom: 20px; /* Space between list items */
+    gap: 20px; /* Space between image and text */
+}
+
+.ul-papers .img {
+    flex-shrink: 0; /* Prevent the image container from shrinking */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.ul-papers .description {
+    flex-grow: 1; /* Allow text to take remaining space */
+    text-align: left; /* Align text to the left */
+}
+
+.img img {
+    width: 200px; /* Fixed width */
+    height: 150px; /* Fixed height */
+    object-fit: cover; /* Crop the image if needed */
+    border-radius: 8px; /* Rounded corners */
+    border: 1px solid #333; /* Optional border for contrast */
+}
+
     /* Dark mode styles */
     body {
         background-color: #121212;
@@ -97,15 +122,7 @@
         color: #ffffff;
     }
 
-.img img {
-    width: auto; /* Ensure the width is adaptive */
-    max-width: 200px; /* Constrain maximum width */
-    height: auto; /* Allow height to adjust automatically */
-    max-height: 150px; /* Constrain maximum height */
-    object-fit: contain; /* Prevent images from being cropped */
-    border-radius: 8px;
-    border: 1px solid #333;
-}
+
 
 
     /* Additional dark mode enhancements */
@@ -120,13 +137,7 @@
         margin-left: 20px;
     }
 
-    .ul-papers li {
-        background-color: #1a1a1a;
-        padding: 20px;
-        border-radius: 8px;
-        margin-bottom: 30px !important;
-        border: 1px solid #333;
-    }
+
   /* Recent News Slider Dark Mode */
   .news-slider {
       background-color: #1a1a1a; /* Match dark mode background */
@@ -148,22 +159,7 @@
   .slick-next:before {
       color: #bb86fc !important; /* Arrow color */
   }
-    /* News slider dark mode */
-/*     .news-slider {
-        background-color: #1a1a1a;
-        padding: 15px;
-        border-radius: 8px;
-    }
 
-    .slick-dots li button:before {
-        color: #e0e0e0 !important;
-    }
-
-    .slick-prev:before,
-    .slick-next:before {
-        color: #bb86fc !important;
-    }
- */
     /* Profile section dark mode */
     #profile {
         background-color: #1a1a1a;
