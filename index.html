@@ -68,6 +68,9 @@
   
  
   <style>
+    :where(html, body, div, section, article) {
+    background-color: var(--background-primary);
+}
 /* CSS Reset */
 * {
     margin: 0;
@@ -85,10 +88,13 @@
     --text-secondary: #e0e0e0; /* Secondary text color */
     --border-color: #333; /* Border color */
 }
-
+html {
+    background-color: var(--background-primary);
+}
 /* Body and Global Section Styles */
 body {
     background-color: var(--background-primary);
+    min-height: 100vh;
     color: var(--text-secondary);
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.6;
