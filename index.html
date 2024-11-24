@@ -65,15 +65,22 @@
     "url": "/"
   }
   </script>
-  /* CSS Reset and Base Styles */
+  
+ 
+
+
+  
+<style>
+
+/* CSS Reset and Base Styles */
 :root {
-    --background-primary: #0a0a0a;
-    --background-secondary: #141414;
-    --accent-primary: #bb86fc;
-    --accent-secondary: #03dac6;
-    --text-primary: #ffffff;
-    --text-secondary: #e0e0e0;
-    --border-color: rgba(255, 255, 255, 0.1);
+    --background-primary: #121212;     /* Your original dark background */
+    --background-secondary: #1a1a1a;   /* Your original secondary background */
+    --accent-primary: #00bcd4;         /* Your original turquoise */
+    --accent-secondary: #0097a7;       /* Your original darker turquoise */
+    --text-primary: #ffffff;           /* Your original white */
+    --text-secondary: #e0e0e0;         /* Your original light grey */
+    --border-color: #333;              /* Your original border color */
 }
 
 body {
@@ -83,7 +90,7 @@ body {
     color: var(--text-secondary);
     margin: 0;
     padding: 0;
-    line-height: 1.7;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -95,50 +102,35 @@ h1, h2, h3, h4, h5, h6 {
     margin: 2rem 0 1rem;
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.75rem; }
+h1 { font-size: 1.5em; }  /* Matching your original size */
+
+p, li {
+    font-size: 1.1em;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+}
 
 /* Enhanced Links */
 a {
-    color: var(--accent-secondary);
+    color: var(--accent-primary);
     text-decoration: none;
     transition: all 0.2s ease;
-    position: relative;
 }
 
 a:hover {
-    color: var(--accent-primary);
-}
-
-a:after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 1px;
-    bottom: -2px;
-    left: 0;
-    background-color: var(--accent-primary);
-    transition: width 0.3s ease;
-}
-
-a:hover:after {
-    width: 100%;
+    color: var(--accent-secondary);
 }
 
 /* Modern Profile Section */
 #profile {
     display: grid;
     grid-template-columns: 300px 1fr;
-    gap: 3rem;
-    padding: 3rem;
+    gap: 20px;
     background-color: var(--background-secondary);
-    border-radius: 16px;
-    margin: 2rem auto;
-    max-width: 1200px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
+    padding: 30px;
+    border-radius: 8px;
     border: 1px solid var(--border-color);
+    margin: 20px 0;
 }
 
 #profile .img {
@@ -147,12 +139,12 @@ a:hover:after {
 }
 
 #profile .img img {
-    width: 100%;
+    width: 300px;
     height: 300px;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
     transition: transform 0.3s ease;
-    filter: brightness(1.1);
 }
 
 #profile .img:hover img {
@@ -160,108 +152,106 @@ a:hover:after {
 }
 
 #profile .description {
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: 1.1em;
+    color: var(--text-secondary);
 }
 
 /* Papers/Projects List */
 .ul-papers {
     list-style: none;
     padding: 0;
-    display: grid;
-    gap: 2rem;
-    margin: 2rem 0;
+    margin: 0;
 }
 
 .ul-papers li {
     display: grid;
     grid-template-columns: 250px 1fr;
-    gap: 2rem;
+    gap: 20px;
+    margin-bottom: 20px;
     background-color: var(--background-secondary);
-    border-radius: 12px;
-    overflow: hidden;
+    border-radius: 8px;
     border: 1px solid var(--border-color);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
 .ul-papers li:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 .ul-papers .img {
+    width: 250px;
     height: 300px;
-    background-color: rgba(255, 255, 255, 0.03);
+    background-color: var(--background-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
 }
 
 .ul-papers .img img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    transition: transform 0.3s ease;
-}
-
-.ul-papers li:hover .img img {
-    transform: scale(1.05);
 }
 
 .ul-papers .description {
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 15px;
+    color: var(--text-secondary);
 }
 
-/* Modern Navigation */
+/* Dark Mode Navbar */
 .navbar {
-    background-color: rgba(10, 10, 10, 0.8) !important;
-    backdrop-filter: blur(10px);
+    background-color: var(--background-secondary) !important;
     border-bottom: 1px solid var(--border-color);
-    padding: 1rem 2rem;
 }
 
 .navbar-light .navbar-brand,
 .navbar-light .navbar-nav .nav-link {
-    color: var(--text-primary) !important;
-    font-weight: 500;
-    transition: color 0.2s ease;
+    color: var(--text-secondary) !important;
 }
 
-.navbar-light .navbar-nav .nav-link:hover {
-    color: var(--accent-secondary) !important;
-}
-
-/* Card Components */
+/* Cards */
 .card {
     background-color: var(--background-secondary);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    transition: transform 0.2s ease;
+    border-color: var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: var(--text-secondary);
 }
 
-.card:hover {
-    transform: translateY(-2px);
-}
-
-/* News Section Enhancements */
+/* News Section */
 #news {
-    background-color: var(--background-secondary);
-    padding: 2rem;
-    border-radius: 12px;
+    background-color: var(--background-primary);
+    color: var(--text-secondary);
+    padding: 20px;
+    border-radius: 8px;
     border: 1px solid var(--border-color);
-    margin: 2rem auto;
-    max-width: 1200px;
 }
 
+/* News Slider */
 .news-slider {
-    background-color: transparent;
-    padding: 1rem 0;
+    background-color: var(--background-secondary);
+    color: var(--text-secondary);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.news-slider div {
+    color: var(--text-secondary);
+}
+
+/* Slider Controls - Keeping your original colors */
+.slick-dots li button:before {
+    color: var(--text-secondary) !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: #bb86fc !important;
 }
 
 /* Responsive Design */
@@ -275,304 +265,12 @@ a:hover:after {
     }
     
     .ul-papers .img {
+        width: 100%;
         height: 200px;
     }
 }
-  
-<!--   <style>
-/* General Body Styling */
-body {
-    font-size: 16px; /* Base font size */
-    background-color: #121212; /* Dark mode background */
-    color: #e0e0e0; /* Light text color for readability */
-}
 
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
-    font-size: 1.5em; /* Ensure headers are larger than body text */
-    color: #ffffff; /* Bright white for emphasis */
-}
-
-p, li {
-    font-size: 1.1em; /* Slightly larger than base font size */
-}
-
-a {
-    color: #00bcd4; /* Turquoise link color */
-    text-decoration: none; /* Remove underline for cleaner look */
-}
-
-a:hover {
-    color: #0097a7; /* Slightly darker turquoise on hover */
-}
-
-/* Profile Section */
-#profile {
-    display: flex; /* Arrange image and text side by side */
-    align-items: flex-start; /* Align items to the top */
-    background-color: #1a1a1a; /* Slightly darker background */
-    padding: 30px;
-    border-radius: 8px;
-    border: 1px solid #333; /* Subtle border for contrast */
-    gap: 20px; /* Space between image and text */
-    margin: 20px 0;
-}
-
-#profile .img {
-    flex-shrink: 0; /* Prevent image from shrinking */
-}
-
-#profile .img img {
-    width: 300px; /* Fixed width */
-    height: 300px; /* Fixed height */
-    object-fit: cover; /* Maintain aspect ratio and crop if necessary */
-    border-radius: 8px; /* Rounded corners */
-    border: 1px solid #333; /* Optional border for contrast */
-}
-
-#profile .description {
-    flex-grow: 1; /* Allow text to take the remaining space */
-    text-align: left; /* Align text to the left */
-    font-size: 1.1em; /* Slightly larger text */
-}
-
-/* Papers List */
-.ul-papers {
-    list-style: none; /* Remove default list styling */
-    padding: 0;
-    margin: 0;
-}
-
-.ul-papers li {
-    display: flex; /* Arrange image and text side by side */
-    align-items: flex-start; /* Align items to the top */
-    margin-bottom: 20px; /* Space between list items */
-    gap: 20px; /* Space between image and text */
-}
-.ul-papers .img {
-    display: flex;
-    align-items: center; /* Center the image inside the box */
-    justify-content: center; /* Center the image horizontally */
-    width: 250px; /* Fixed width for the box */
-    height: 300px; /* Fixed height for the box */
-    background-color: #1a1a1a; /* Black-ish background for the box */
-    border: 1px solid #333; /* Subtle border for contrast */
-    border-radius: 8px; /* Optional rounded corners */
-    padding: 10px; /* Add some padding around the image */
-    box-sizing: border-box; /* Ensure padding is included in the dimensions */
-}
-
-.ul-papers .img img {
-    max-width: 100%; /* Ensure the image scales within the box */
-    max-height: 100%; /* Prevent the image from overflowing the box */
-    object-fit: contain; /* Ensure the image is not cropped */
-}
-
-
-.ul-papers .description {
-    flex-grow: 1; /* Allow text to take remaining space */
-    background-color: #1a1a1a; /* Dark mode background */
-    padding: 15px;
-    border-radius: 8px; /* Rounded corners */
-    margin-left: 20px;
-}
-
-/* Dark Mode Navbar */
-.navbar {
-    background-color: #1a1a1a !important;
-}
-
-.navbar-light .navbar-brand,
-.navbar-light .navbar-nav .nav-link {
-    color: #e0e0e0 !important;
-}
-
-/* Cards */
-.card {
-    background-color: #1a1a1a;
-    border-color: #333;
-}
-
-/* News Section */
-#news {
-    background-color: #121212; /* Match the dark mode background */
-    color: #e0e0e0; /* Light text color */
-    padding: 20px;
-    border-radius: 8px; /* Rounded corners */
-    border: 1px solid #333; /* Subtle border for contrast */
-}
-
-/* News Slider */
-.news-slider {
-    background-color: #1a1a1a; /* Darker background for the slider */
-    color: #e0e0e0; /* Light text color */
-    padding: 10px;
-    border-radius: 8px; /* Rounded corners */
-    border: 1px solid #333; /* Subtle border */
-}
-
-.news-slider div {
-    color: #e0e0e0; /* Ensure inner text is visible */
-}
-
-/* Slider Controls */
-.slick-dots li button:before {
-    color: #e0e0e0 !important; /* Light-colored dots */
-}
-
-.slick-prev:before,
-.slick-next:before {
-    color: #bb86fc !important; /* Accent color for arrows */
-}
-</style> -->
-
-<!--     <style>
-      .ul-papers li {
-    display: flex; /* Display items in a row */
-    align-items: flex-start; /* Align items to the top */
-    margin-bottom: 20px; /* Space between list items */
-    gap: 20px; /* Space between image and text */
-}
-
-.ul-papers .img {
-    flex-shrink: 0; /* Prevent the image container from shrinking */
-    margin-right: 20px; /* Space between image and text */
-}
-
-.ul-papers .description {
-    flex-grow: 1; /* Allow text to take remaining space */
-    text-align: left; /* Align text to the left */
-}
-
-.img img {
-    width: 300px; /* Fixed width */
-    height: 300px; /* Fixed height */
-    object-fit: cover; /* Crop the image if needed */
-    border-radius: 8px; /* Rounded corners */
-    border: 1px solid #333; /* Optional border for contrast */
-}
-
-    /* Dark mode styles */
-    body {
-    font-size: 16px; /* Base font size */
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-size: 1.25em; /* Adjust heading sizes relative to base */
-}
-
-p, li {
-    font-size: 1.1em; /* Increase paragraph and list font size */
-}
-
-#profile-details {
-    font-size: 1.05em; /* Make profile details text larger */
-}
-
-a {
-    color: #00bcd4; /* Turquoise blue */
-}
-
-a:hover {
-    color: #0097a7; /* Slightly darker turquoise on hover */
-}
-
-    body {
-        background-color: #121212;
-        color: #e0e0e0;
-    }
-
-    .navbar {
-        background-color: #1a1a1a !important;
-    }
-
-    .navbar-light .navbar-brand,
-    .navbar-light .navbar-nav .nav-link {
-        color: #e0e0e0 !important;
-    }
-
-    .card {
-        background-color: #1a1a1a;
-        border-color: #333;
-    }
-
-    a {
-        color: #bb86fc;
-    }
-
-    a:hover {
-        color: #9965f4;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        color: #ffffff;
-    }
-
-
-
-
-    /* Additional dark mode enhancements */
-    .home-section {
-        background-color: #121212;
-    }
-
-    .description {
-        background-color: #1a1a1a;
-        padding: 15px;
-        border-radius: 8px;
-        margin-left: 20px;
-    }
-
-
-#news {
-    background-color: #121212; /* Match the dark mode background */
-    color: #e0e0e0; /* Set text color to a light shade for contrast */
-    padding: 20px;
-    border-radius: 8px; /* Optional: rounded corners for a modern look */
-    border: 1px solid #333; /* Optional: subtle border for contrast */
-}
-
-.news-slider {
-    background-color: #1a1a1a; /* Darker background for the slider */
-    color: #e0e0e0; /* Light text */
-    padding: 10px; /* Inner padding */
-    border-radius: 8px; /* Rounded corners */
-    border: 1px solid #333; /* Optional border */
-}
-
-.news-slider div {
-    color: #e0e0e0; /* Ensure the text inside the slider is visible */
-}
-
-/* Adjust dot colors for dark mode */
-.slick-dots li button:before {
-    color: #e0e0e0 !important; /* Change dots to light color */
-}
-
-/* Adjust arrow colors for dark mode */
-.slick-prev:before,
-.slick-next:before {
-    color: #bb86fc !important; /* Use an accent color for the arrows */
-}
-
-    /* Profile section dark mode */
-    #profile {
-        background-color: #1a1a1a;
-        padding: 30px;
-        border-radius: 8px;
-        margin: 20px 0;
-        border: 1px solid #333;
-    }
-
-    /* Search section dark mode */
-    .search-header {
-        background-color: #1a1a1a;
-    }
-
-    .search-results {
-        background-color: #121212;
-    }
-    </style> -->
+</style>
 </head>
 
 
