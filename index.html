@@ -80,7 +80,7 @@
 
 /* Global Variables for Dark Mode */
 :root {
-    --background-primary: #121212; /* Page background */
+    --background-primary: #1c1c1c/*#121212; /* Page background */
     --background-secondary: #1a1a1a; /* Section background */
     --accent-primary: #00bcd4; /* Link color */
     --accent-secondary: #0097a7; /* Hover link color */
@@ -94,7 +94,15 @@
     background-color: var(--background-primary) !important;
     color: var(--text-secondary) !important;
 }
+a {
+    color: #32CD32; /* Light green */
+    text-decoration: none; /* Remove underline if desired */
+}
 
+a:hover,
+a:focus {
+    color: var(--accent-secondary); /* Optional hover effect */
+}
 html {
     background-color: var(--background-primary);
 }
