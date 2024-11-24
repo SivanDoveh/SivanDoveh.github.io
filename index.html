@@ -371,20 +371,25 @@ a:hover {
     border-bottom: 1px solid var(--border-color);
 }
 
-.navbar .nav-link {
-    margin: 0 10px;
-    color: var(--accent-primary);
+/* Navbar Link Colors */
+.nav-link {
+    color: var(--accent-primary) !important; /* Match all links to the accent color */
     text-decoration: none;
 }
 
-.navbar .nav-link:hover {
-    color: var(--accent-secondary);
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent-secondary) !important; /* Match hover and active to secondary accent */
+}
+
+.navbar .nav-link:visited {
+    color: var(--accent-primary) !important; /* Prevent visited links from appearing differently */
 }
 
 .navbar .nav-link.active {
-    color: var(--accent-primary);
-    font-weight: bold;
+    font-weight: bold; /* Highlight the active page */
 }
+
 
 /* Profile Section */
 #profile {
