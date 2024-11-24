@@ -64,7 +64,221 @@
     "url": "/"
   }
   </script>
-  <style>
+  /* CSS Reset and Base Styles */
+:root {
+    --background-primary: #0a0a0a;
+    --background-secondary: #141414;
+    --accent-primary: #bb86fc;
+    --accent-secondary: #03dac6;
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    background-color: var(--background-primary);
+    color: var(--text-secondary);
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Modern Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.025em;
+    margin: 2rem 0 1rem;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+
+/* Enhanced Links */
+a {
+    color: var(--accent-secondary);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+a:hover {
+    color: var(--accent-primary);
+}
+
+a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--accent-primary);
+    transition: width 0.3s ease;
+}
+
+a:hover:after {
+    width: 100%;
+}
+
+/* Modern Profile Section */
+#profile {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    padding: 3rem;
+    background-color: var(--background-secondary);
+    border-radius: 16px;
+    margin: 2rem auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--border-color);
+}
+
+#profile .img {
+    position: relative;
+    overflow: hidden;
+}
+
+#profile .img img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    filter: brightness(1.1);
+}
+
+#profile .img:hover img {
+    transform: scale(1.02);
+}
+
+#profile .description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Papers/Projects List */
+.ul-papers {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.ul-papers li {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+    background-color: var(--background-secondary);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ul-papers li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.ul-papers .img {
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.03);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.ul-papers .img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.ul-papers li:hover .img img {
+    transform: scale(1.05);
+}
+
+.ul-papers .description {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Modern Navigation */
+.navbar {
+    background-color: rgba(10, 10, 10, 0.8) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 2rem;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+    color: var(--text-primary) !important;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--accent-secondary) !important;
+}
+
+/* Card Components */
+.card {
+    background-color: var(--background-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+/* News Section Enhancements */
+#news {
+    background-color: var(--background-secondary);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.news-slider {
+    background-color: transparent;
+    padding: 1rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #profile {
+        grid-template-columns: 1fr;
+    }
+    
+    .ul-papers li {
+        grid-template-columns: 1fr;
+    }
+    
+    .ul-papers .img {
+        height: 200px;
+    }
+}
+  
+<!--   <style>
 /* General Body Styling */
 body {
     font-size: 16px; /* Base font size */
@@ -134,10 +348,25 @@ a:hover {
     margin-bottom: 20px; /* Space between list items */
     gap: 20px; /* Space between image and text */
 }
-
 .ul-papers .img {
-    flex-shrink: 0; /* Prevent image container from shrinking */
+    display: flex;
+    align-items: center; /* Center the image inside the box */
+    justify-content: center; /* Center the image horizontally */
+    width: 250px; /* Fixed width for the box */
+    height: 300px; /* Fixed height for the box */
+    background-color: #1a1a1a; /* Black-ish background for the box */
+    border: 1px solid #333; /* Subtle border for contrast */
+    border-radius: 8px; /* Optional rounded corners */
+    padding: 10px; /* Add some padding around the image */
+    box-sizing: border-box; /* Ensure padding is included in the dimensions */
 }
+
+.ul-papers .img img {
+    max-width: 100%; /* Ensure the image scales within the box */
+    max-height: 100%; /* Prevent the image from overflowing the box */
+    object-fit: contain; /* Ensure the image is not cropped */
+}
+
 
 .ul-papers .description {
     flex-grow: 1; /* Allow text to take remaining space */
@@ -194,7 +423,7 @@ a:hover {
 .slick-next:before {
     color: #bb86fc !important; /* Accent color for arrows */
 }
-</style>
+</style> -->
 
 <!--     <style>
       .ul-papers li {
@@ -553,7 +782,7 @@ a:hover {
 
                 <li style="display: flex; align-items: flex-start; margin-bottom: 20px;">
           <div class="img" style="margin-right: 20px;">
-            <img src="/papers/images/glov.jpg" class="img-responsive" alt="">
+            <img src="/papers/images/glov.png" class="img-responsive" alt="">
           </div>
           <div class="description">
             <p class="title">GLOV: Guided Large Language Models as Implicit Optimizers for Vision Language Models</p>
