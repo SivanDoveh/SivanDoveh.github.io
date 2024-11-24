@@ -68,7 +68,24 @@
   <!-- Add custom style -->
 <!-- Add custom styles for better alignment -->
 <style>
-  .img img {
+    body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
+  }
+
+  body.dark-mode a {
+    color: #bb86fc; /* Accent color for links */
+  }
+
+  body.dark-mode .img img {
+    filter: brightness(0.8); /* Dim images slightly */
+  }
+
+  body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
+    color: #ffffff; /* Ensure headings are bright */
+  }
+  
+  papers.img img {
   width: 150px; /* Set your desired width */
   height: auto; /* Maintain aspect ratio */
   max-width: 100%; /* Responsive behavior */
