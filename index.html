@@ -125,9 +125,29 @@
         margin-bottom: 30px !important;
         border: 1px solid #333;
     }
-
+  /* Recent News Slider Dark Mode */
+  .news-slider {
+      background-color: #1a1a1a; /* Match dark mode background */
+      color: #e0e0e0; /* Light text */
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #333; /* Optional: add a border for contrast */
+  }
+  
+  .news-slider div {
+      color: #e0e0e0; /* Ensure text inside slides is light */
+  }
+  
+  .slick-dots li button:before {
+      color: #e0e0e0 !important; /* Adjust dots for dark mode */
+  }
+  
+  .slick-prev:before,
+  .slick-next:before {
+      color: #bb86fc !important; /* Arrow color */
+  }
     /* News slider dark mode */
-    .news-slider {
+/*     .news-slider {
         background-color: #1a1a1a;
         padding: 15px;
         border-radius: 8px;
@@ -141,7 +161,7 @@
     .slick-next:before {
         color: #bb86fc !important;
     }
-
+ */
     /* Profile section dark mode */
     #profile {
         background-color: #1a1a1a;
