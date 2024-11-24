@@ -87,6 +87,8 @@
     --text-primary: #ffffff; /* Main text color */
     --text-secondary: #e0e0e0; /* Secondary text color */
     --border-color: #1a1a1a/*#333; /* Border color */
+    --light-green: #32CD32; /* Define light green color */
+
 }
     * {
     background-color: var(--background-primary) !important;
@@ -123,26 +125,38 @@ section {
     border: 1px solid var(--border-color);
 }
 
-/* Navbar Styling */
-.navbar {
-    background-color: var(--background-secondary);
-    border-bottom: 1px solid var(--border-color);
-}
-
 .navbar .nav-link {
-    color: var(--accent-primary);
+    color: var(--accent-primary); /* Default color for navbar links */
     text-decoration: none;
     margin: 0 10px;
 }
 
-.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--light-green); /* Light green for active navbar links */
+}
+
+.navbar .nav-link:hover {
+    color: var(--accent-secondary); /* Optional hover color */
+}
+.navbar {
+    background-color: var(--background-secondary);
+    border-bottom: 1px solid var(--border-color);
+} 
+ 
+/* .navbar .nav-link {
+    color: var(--accent-primary);
+    text-decoration: none;
+    margin: 0 10px;
+} */
+
+/* .navbar .nav-link:hover,
 .navbar .nav-link.active {
     color: var(--accent-secondary);
-}
+} */
 
 .navbar .nav-link:visited {
     color: var(--accent-primary);
-}
+}  
 
 /* Typography */
 h1, h2, h3, h4, h5, h6, p, li, a {
