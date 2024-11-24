@@ -225,10 +225,15 @@ a:hover {
     color: var(--accent-secondary) !important; /* Match the hover style */
 }
 
-.navbar-light .navbar-brand,
+.nav-link.active {
+    color: var(--accent-primary) !important; /* Match other links' colors */
+    font-weight: bold; /* Optional: Highlight the active link */
+}
+
+/* .navbar-light .navbar-brand,
 .navbar-light .navbar-nav .nav-link {
     color: var(--text-secondary) !important;
-}
+} */
 
 /* Cards */
 .card {
