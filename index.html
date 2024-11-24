@@ -67,232 +67,6 @@
   </script>
   
  
-
-
-  
-<!-- <style>
-
-/* CSS Reset and Base Styles */
-:root {
-    --background-primary: #121212;     /* Your original dark background */
-    --background-secondary: #1a1a1a;   /* Your original secondary background */
-    --accent-primary: #00bcd4;         /* Your original turquoise */
-    --accent-secondary: #0097a7;       /* Your original darker turquoise */
-    --text-primary: #ffffff;           /* Your original white */
-    --text-secondary: #e0e0e0;         /* Your original light grey */
-    --border-color: #333;              /* Your original border color */
-}
-
-  body {
-    background-color: var(--background-primary);
-}
-
-#about, #news, #papers {
-    background-color: var(--background-primary);
-    color: var(--text-secondary);
-}
-body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 16px;
-    background-color: var(--background-primary);
-    color: var(--text-secondary);
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-}
-
-/* Modern Typography */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    color: var(--text-primary);
-    letter-spacing: -0.025em;
-    margin: 2rem 0 1rem;
-}
-
-h1 { font-size: 1.5em; }  /* Matching your original size */
-
-p, li {
-    font-size: 1.1em;
-    color: var(--text-secondary);
-    margin-bottom: 15px;
-}
-
-/* Enhanced Links */
-a {
-    color: var(--accent-primary);
-    text-decoration: none;
-    transition: all 0.2s ease;
-}
-
-a:hover {
-    color: var(--accent-secondary);
-}
-
-/* Modern Profile Section */
-#profile {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 20px;
-    background-color: var(--background-secondary);
-    padding: 30px;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-    margin: 20px 0;
-}
-
-#profile .img {
-    position: relative;
-    overflow: hidden;
-}
-
-#profile .img img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-    transition: transform 0.3s ease;
-}
-
-#profile .img:hover img {
-    transform: scale(1.02);
-}
-
-#profile .description {
-    font-size: 1.1em;
-    color: var(--text-secondary);
-}
-
-/* Papers/Projects List */
-.ul-papers li {
-    display: flex;
-    align-items: center; /* Vertically align images and descriptions */
-    gap: 20px;
-    margin-bottom: 20px;
-    background-color: var(--background-secondary);
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-    padding: 15px; /* Add padding for consistent spacing */
-    transition: transform 0.2s ease;
-}
-.ul-papers .img img {
-    width: 150px; /* Adjust image width */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain;
-    border-radius: 8px;
-}
-
-.ul-papers {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-
-.ul-papers li:hover {
-    transform: translateY(-2px);
-}
-
-.ul-papers .img {
-    width: 250px;
-    height: 300px;
-    background-color: var(--background-secondary);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.ul-papers .description {
-    padding: 15px;
-    color: var(--text-secondary);
-}
-
-/* Dark Mode Navbar */
-.navbar {
-    background-color: var(--background-secondary) !important;
-    border-bottom: 1px solid var(--border-color);
-}
-.nav-link {
-    color: var(--accent-primary) !important; /* Match the link color */
-    text-decoration: none;
-}
-
-.nav-link:hover {
-    color: var(--accent-secondary) !important; /* Match the hover style */
-}
-
-.nav-link.active {
-    color: var(--accent-primary) !important; /* Match other links' colors */
-    font-weight: bold; /* Optional: Highlight the active link */
-}
-
-/* .navbar-light .navbar-brand,
-.navbar-light .navbar-nav .nav-link {
-    color: var(--text-secondary) !important;
-} */
-
-/* Cards */
-.card {
-    background-color: var(--background-secondary);
-    border-color: var(--border-color);
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-    color: var(--text-secondary);
-}
-
-/* News Section */
-#news {
-    background-color: var(--background-primary);
-    color: var(--text-secondary);
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-}
-
-/* News Slider */
-.news-slider {
-    background-color: var(--background-secondary);
-    color: var(--text-secondary);
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-}
-
-.news-slider div {
-    color: var(--text-secondary);
-}
-
-/* Slider Controls - Keeping your original colors */
-.slick-dots li button:before {
-    color: var(--text-secondary) !important;
-}
-
-.slick-prev:before,
-.slick-next:before {
-    color: #bb86fc !important;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    #profile {
-        grid-template-columns: 1fr;
-    }
-    
-    .ul-papers li {
-        grid-template-columns: 1fr;
-    }
-    
-    .ul-papers .img {
-        width: 100%;
-        height: 200px;
-    }
-}
- -->
   <style>
 /* CSS Reset */
 * {
@@ -301,100 +75,79 @@ a:hover {
     box-sizing: border-box;
 }
 
-/* Global Variables */
+/* Global Variables for Dark Mode */
 :root {
-    --background-primary: #121212;
-    --background-secondary: #1a1a1a;
-    --accent-primary: #00bcd4;
-    --accent-secondary: #0097a7;
-    --text-primary: #ffffff;
-    --text-secondary: #e0e0e0;
-    --border-color: #333;
+    --background-primary: #121212; /* Page background */
+    --background-secondary: #1a1a1a; /* Section background */
+    --accent-primary: #00bcd4; /* Link color */
+    --accent-secondary: #0097a7; /* Hover link color */
+    --text-primary: #ffffff; /* Main text color */
+    --text-secondary: #e0e0e0; /* Secondary text color */
+    --border-color: #333; /* Border color */
 }
 
-/* Body */
+/* Body and Global Section Styles */
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 16px;
     background-color: var(--background-primary);
     color: var(--text-secondary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    -webkit-font-smoothing: antialiased;
 }
 
-/* Section */
 section {
-    width: 100%;
+    background-color: var(--background-primary);
+    color: var(--text-secondary);
     padding: 50px 15px;
     margin-bottom: 20px;
-    background-color: var(--background-primary);
 }
 
-section .container {
+.container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 20px;
+    background-color: var(--background-secondary);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
 }
 
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    color: var(--text-primary);
-    letter-spacing: -0.025em;
-    margin: 2rem 0 1rem;
-}
-
-p, li {
-    font-size: 1.1em;
-    color: var(--text-secondary);
-    margin-bottom: 15px;
-}
-
-/* Links */
-a {
-    color: var(--accent-primary);
-    text-decoration: none;
-    transition: all 0.2s ease;
-}
-
-a:hover {
-    color: var(--accent-secondary);
-}
-
-/* Navbar */
+/* Navbar Styling */
 .navbar {
-    height: 60px;
-    padding: 0 15px;
     background-color: var(--background-secondary);
     border-bottom: 1px solid var(--border-color);
 }
 
-/* Navbar Link Colors */
-.nav-link {
-    color: var(--accent-primary) !important; /* Match all links to the accent color */
+.navbar .nav-link {
+    color: var(--accent-primary);
     text-decoration: none;
+    margin: 0 10px;
 }
 
-.nav-link:hover,
-.nav-link.active {
-    color: var(--accent-secondary) !important; /* Match hover and active to secondary accent */
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--accent-secondary);
 }
 
 .navbar .nav-link:visited {
-    color: var(--accent-primary) !important; /* Prevent visited links from appearing differently */
+    color: var(--accent-primary);
 }
 
-.navbar .nav-link.active {
-    font-weight: bold; /* Highlight the active page */
+/* Typography */
+h1, h2, h3, h4, h5, h6, p, li, a {
+    color: var(--text-secondary);
 }
 
+h1, h2 {
+    color: var(--text-primary);
+}
+
+p {
+    margin-bottom: 15px;
+}
 
 /* Profile Section */
 #profile {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -411,6 +164,11 @@ a:hover {
     border-radius: 50%;
 }
 
+#profile .description {
+    flex: 1;
+}
+
+/* Papers/Projects List */
 .ul-papers {
     list-style: none;
     padding: 0;
@@ -418,63 +176,61 @@ a:hover {
 }
 
 .ul-papers li {
-    display: flex; /* Use flexbox for consistent alignment */
-    align-items: center; /* Vertically align images and text */
-    gap: 20px; /* Space between image and text */
-    margin-bottom: 20px; /* Space between paper items */
-    padding: 15px; /* Add padding inside the list items */
-    background-color: var(--background-secondary); /* Match dark mode background */
-    border-radius: 8px; /* Rounded corners */
-    border: 1px solid var(--border-color); /* Add subtle border */
-    transition: transform 0.2s ease; /* Optional: Add a hover effect */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--background-secondary);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease;
 }
 
 .ul-papers li:hover {
-    transform: translateY(-2px); /* Subtle hover effect */
+    transform: translateY(-2px);
 }
 
 .ul-papers .img {
-    flex-shrink: 0; /* Prevent image from shrinking */
-    width: 150px; /* Consistent width for all images */
-    height: 150px; /* Consistent height for all images */
-    background-color: var(--background-secondary); /* Ensure a clean background */
-    border-radius: 8px; /* Rounded corners for the image container */
+    flex-shrink: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    overflow: hidden;
     display: flex;
-    align-items: center; /* Center image inside the container */
+    align-items: center;
     justify-content: center;
-    overflow: hidden; /* Hide overflow for large images */
+    background-color: var(--background-secondary);
 }
 
 .ul-papers .img img {
-    width: 100%; /* Image takes up full width of the container */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Prevent image stretching */
-    border-radius: 8px; /* Match the container's border radius */
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
 }
 
 .ul-papers .description {
-    flex-grow: 1; /* Allow text to take up remaining space */
+    flex: 1;
     color: var(--text-secondary);
-    line-height: 1.4; /* Improve readability */
+    line-height: 1.4;
 }
 
 .ul-papers .description p {
-    margin: 0 0 10px; /* Space between paragraphs */
+    margin: 0 0 10px;
 }
 
 /* News Section */
 #news {
-    background-color: var(--background-primary);
+    background-color: var(--background-secondary);
     color: var(--text-secondary);
-    padding: 50px 15px;
+    padding: 20px;
     border-radius: 8px;
     border: 1px solid var(--border-color);
 }
 
-/* Responsive Images */
-img {
-    max-width: 100%;
-    height: auto;
+.news-slider div {
+    color: var(--text-secondary);
 }
 
 /* Responsive Design */
@@ -495,7 +251,6 @@ img {
         height: auto;
     }
 }
-
 
 </style>
 </head>
