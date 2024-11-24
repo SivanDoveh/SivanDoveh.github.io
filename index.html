@@ -142,21 +142,26 @@ section {
     background-color: var(--background-secondary);
     border-bottom: 1px solid var(--border-color);
 } 
- 
-/* .navbar .nav-link {
-    color: var(--accent-primary);
-    text-decoration: none;
-    margin: 0 10px;
-} */
 
-/* .navbar .nav-link:hover,
-.navbar .nav-link.active {
-    color: var(--accent-secondary);
-} */
 
 .navbar .nav-link:visited {
     color: var(--accent-primary);
 }  
+
+
+    
+/* */
+.navbar .navbar-brand {
+    color: var(--accent-primary); /* Use the same color as other nav items */
+    text-decoration: none; /* Optional, to remove underline */
+}
+
+.navbar .navbar-brand:hover {
+    color: var(--accent-secondary); /* Optional hover effect */
+}
+
+
+
 
 /* Typography */
 h1, h2, h3, h4, h5, h6, p, li, a {
