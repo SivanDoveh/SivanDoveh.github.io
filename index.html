@@ -138,27 +138,36 @@
     }
 
 
-  /* Recent News Slider Dark Mode */
-  .news-slider {
-      background-color: #1a1a1a; /* Match dark mode background */
-      color: #e0e0e0; /* Light text */
-      padding: 15px;
-      border-radius: 8px;
-      border: 1px solid #333; /* Optional: add a border for contrast */
-  }
-  
-  .news-slider div {
-      color: #e0e0e0; /* Ensure text inside slides is light */
-  }
-  
-  .slick-dots li button:before {
-      color: #e0e0e0 !important; /* Adjust dots for dark mode */
-  }
-  
-  .slick-prev:before,
-  .slick-next:before {
-      color: #bb86fc !important; /* Arrow color */
-  }
+#news {
+    background-color: #121212; /* Match the dark mode background */
+    color: #e0e0e0; /* Set text color to a light shade for contrast */
+    padding: 20px;
+    border-radius: 8px; /* Optional: rounded corners for a modern look */
+    border: 1px solid #333; /* Optional: subtle border for contrast */
+}
+
+.news-slider {
+    background-color: #1a1a1a; /* Darker background for the slider */
+    color: #e0e0e0; /* Light text */
+    padding: 10px; /* Inner padding */
+    border-radius: 8px; /* Rounded corners */
+    border: 1px solid #333; /* Optional border */
+}
+
+.news-slider div {
+    color: #e0e0e0; /* Ensure the text inside the slider is visible */
+}
+
+/* Adjust dot colors for dark mode */
+.slick-dots li button:before {
+    color: #e0e0e0 !important; /* Change dots to light color */
+}
+
+/* Adjust arrow colors for dark mode */
+.slick-prev:before,
+.slick-next:before {
+    color: #bb86fc !important; /* Use an accent color for the arrows */
+}
 
     /* Profile section dark mode */
     #profile {
