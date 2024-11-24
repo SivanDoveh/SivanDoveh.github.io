@@ -185,10 +185,9 @@ a:focus {
     color: var(--accent-secondary); /* Optional hover effect */
 }
 /* Profile Section */
-#profile {
+/* #profile {
     display: flex;
     align-items: center;
-/*     align-items: stretch; /* Ensures both the image and text stretch to the same height */ */
     gap: 20px;
     padding: 30px;
     background-color: var(--background-secondary);
@@ -197,15 +196,15 @@ a:focus {
 }
 
 #profile .img img {
-    width: 400px; /* Ensure width and height are equal */
-    height: 400px; /* Equal height for a circular shape */
-    object-fit: cover; /* Prevent distortion */
-    border-radius: 50%; /* Circular shape */
+    width: 400px; 
+    height: 400px; 
+    object-fit: cover; 
+    border-radius: 50%; 
 }
 
 #profile .avatar {
-    width: 200px; /* Match width and height */
-    height: 200px; /* Match height to width */
+    width: 200px;
+    height: 200px; 
     object-fit: cover;
     border-radius: 50%;
 }
@@ -216,11 +215,44 @@ a:focus {
 }
 
 #profile-details {
-    flex: 1; /* Makes the text area fill the remaining space */
+    flex: 1; 
     display: flex;
-    flex-direction: column; /* Stacks the text content */
-    justify-content: center; /* Aligns the text vertically */
-    line-height: 1.6; /* Improves readability */
+    flex-direction: column; 
+    justify-content: center; 
+    line-height: 1.6; 
+} */
+#profile {
+    display: flex;
+    align-items: center; /* Center-aligns the text with the image */
+    gap: 30px; /* Adds more space between the image and the text */
+    padding: 40px; /* Adjusts padding for better spacing */
+    background-color: var(--background-secondary);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+#profile .img img {
+    width: 500px; /* Increase the size of the image */
+    height: 500px; /* Make the height equal to the width for a perfect circle */
+    object-fit: cover; /* Ensures the image fills the circle */
+    border-radius: 50%; /* Keeps the circular shape */
+}
+
+/* Remove redundant styling for .avatar */
+#profile .avatar {
+    display: none; /* If this class isn't used, you can ignore or remove it */
+}
+
+#profile .description {
+    flex: 1;
+    line-height: 1.6; /* Improves readability of the text */
+}
+
+#profile-details {
+    flex: 1; /* Makes the text section fill the remaining space */
+    display: flex;
+    flex-direction: column; /* Stacks text content vertically */
+    justify-content: center; /* Vertically centers the text content */
 }
 
 /* Papers/Projects List */
